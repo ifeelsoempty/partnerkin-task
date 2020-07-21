@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partnerkin test</title>
+
+    <script async src="./submit.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="form">
+      <h1>Для первичного анализа нам требуется чуть больше информации</h1>
+      <div class="steps">
+        <label>Укажите сферу вашего бизнеса</label>
+        <div class="step-1">
+          <select class="custom-select">
+            <option>Услуги</option>
+            <option>Торговля</option>
+            <option>Общественное питание</option>
+            <option>Производство</option>
+            <option>IT-сфера</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <label>Какие этапы работ уже проведены по упаковке?</label>
+        <div class="step-2">
+          <div class="column">
+            <div class="item">
+              <input name="stage" type="radio" value="Никаких" />
+              <p>Никаких</p>
+            </div>
+            <div class="item">
+              <input
+                name="stage"
+                type="radio"
+                value="Готова юридическая модель"
+              />
+              <p>Готова юридическая модель</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item">
+              <input name="stage" type="radio" value="Разработана финмодель" />
+              <p>Разработана финмодель</p>
+            </div>
+            <div class="item">
+              <input
+                name="stage"
+                type="radio"
+                value="Прописаны стандарты и бизнес-процессы"
+              />
+              <p>Прописаны стандарты и бизнес-процессы</p>
+            </div>
+          </div>
+        </div>
+        <label
+          >Какого месячного заработка хотите добиться с вашей франшизы?</label
+        >
+        <div class="step-3">
+          <div class="column">
+            <div class="item">
+              <input name="salary" type="radio" value="100-300" />
+              <p>100-300 тысяч рублей</p>
+            </div>
+            <div class="item">
+              <input name="salary" type="radio" value="300-500" />
+              <p>300-500 тысяч рублей</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item">
+              <input name="salary" type="radio" value="500-1000" />
+              <p>500-1000 тысяч рублей</p>
+            </div>
+            <div class="item">
+              <input name="salary" type="radio" value="1000+" />
+              <p>Более миллиона рублей</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="submit">
+        Отправить
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #e0e0e0;
+}
+
+input {
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 10;
+  margin-right: 15px;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid black;
+  opacity: 0.3;
+}
+
+input[type="text"]:focus {
+  opacity: 1;
+  outline: 0;
+}
+
+label {
+  font-weight: 200;
+  color: #979797;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  padding: 66px 120px;
+  width: 710px;
+  background: #ffffff;
+  height: 915px;
+  border-radius: 15px;
+}
+
+.form h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.client-data {
+  margin: 45px 0;
+}
+
+.client-data * {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  width: 50%;
+}
+
+.steps {
+  margin: 45px 0;
+}
+
+.step-1 {
+  margin: 15px 0;
+}
+
+.step-2 {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.step-3 {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  display: flex;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.input-item {
+  margin: 15px 0;
+}
+
+.completed p{
+  font-size: 25px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.completed img{
+  display: block;
+  margin: 0 auto;
+}
+
+.submit {
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 36%;
+  left: 36%;
+  bottom: 80px;
+  width: 200px;
+  height: 55px;
+  color: #ffffff;
+  background: #b3688b;
+  border-radius: 50px;
+  border: 0;
+}
+
+.submit:focus {
+  border: none;
+  outline: none;
+}
+
+.submit:hover {
+  transition: 0.2s;
+  background: rgb(161, 79, 117);
+}
