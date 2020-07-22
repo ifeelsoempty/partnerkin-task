@@ -2,4 +2,6 @@
 
 Путь к JSON-объекту заявок - 'test-task-partnerkin-master/api/data/get?auth_key=junior_test'.
 
-(При другом значении параметра запроса или его отсутсвии выводится сообщение "You have no access")
+(При другом значении параметра запроса или его отсутсвии выводится сообщение "You have no access").
+
+Деплоил на OpenServer.
