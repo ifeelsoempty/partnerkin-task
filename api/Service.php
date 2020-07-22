@@ -5,21 +5,29 @@ class Service
 {
     public static function getData()
     {
+        $paramsPath = ROOT . '/db/db_params.php';
+        $params = include($paramsPath);
         $db = Db::getConnection();
 
-        $result = $db->query("SELECT * FROM `customer-data`");
+        if ($_GET && (md5($_GET['auth_key']) == $params['auth_key'])) {
+            $result = $db->query("SELECT * FROM `customer-data`");
 
-        $i = 0;
-        while ($row = $result->fetch()) {
-            $data[$i]['id'] = $row['id'];
-            $data[$i]['name'] = $row['name'];
-            $data[$i]['email'] = $row['email'];
-            $data[$i]['city'] = $row['city'];
-            $data[$i]['number'] = $row['number'];
-            $data[$i]['business'] = $row['business'];
-            $data[$i]['salary'] = $row['salary'];
-            $data[$i]['stage'] = $row['stage'];
-            $i++;
+            $i = 0;
+            while ($row = $result->fetch()) {
+                $data[$i]['id'] = $row['id'];
+                $data[$i]['name'] = $row['name'];
+                $data[$i]['email'] = $row['email'];
+                $data[$i]['city'] = $row['city'];
+                $data[$i]['number'] = $row['number'];
+                $data[$i]['business'] = $row['business'];
+                $data[$i]['salary'] = $row['salary'];
+                $data[$i]['stage'] = $row['stage'];
+                $data[$i]['date'] = $row['date'];
+                $data[$i]['time'] = $row['time'];
+                $i++;
+            }
+        } else {
+            $data = "You have no access";
         }
 
         return $data;

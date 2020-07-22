@@ -2,7 +2,6 @@
 
 class Router
 {
-
     private  $routes;
 
     public function __construct()
@@ -21,6 +20,7 @@ class Router
     public function run()
     {
         $uri = $this->getURI();
+        $uri = preg_replace("/\?.+/", "", $uri);
         $routFoundFlag = false;
         header('Content-Type: application/json');
         foreach ($this->routes as $uriPattern => $path) {

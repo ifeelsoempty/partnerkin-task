@@ -21,75 +21,91 @@
       <h1>Для первичного анализа нам требуется чуть больше информации</h1>
       <div class="steps">
         <label>Укажите сферу вашего бизнеса</label>
-        <div class="step-1">
-          <select class="custom-select">
+        <div class="step" style="display: block;">
+          <select class="select">
             <option>Услуги</option>
             <option>Торговля</option>
             <option>Общественное питание</option>
             <option>Производство</option>
             <option>IT-сфера</option>
-            <option>Другое</option>
+            <option id="another">Другое</option>
           </select>
         </div>
         <label>Какие этапы работ уже проведены по упаковке?</label>
-        <div class="step-2">
+        <div class="step">
           <div class="column">
-            <div class="item">
-              <input name="stage" type="radio" value="Никаких" />
-              <p>Никаких</p>
+            <div class="check-item">
+              <input id="Никаких" name="stage" type="radio" value="Никаких" />
+              <label for="Никаких">Никаких</label>
             </div>
-            <div class="item">
+            <div class="check-item">
               <input
+                id="Готова юридическая модель"
                 name="stage"
                 type="radio"
                 value="Готова юридическая модель"
               />
-              <p>Готова юридическая модель</p>
+              <label for="Готова юридическая модель">
+                Готова юридическая модель
+              </label>
             </div>
           </div>
           <div class="column">
-            <div class="item">
-              <input name="stage" type="radio" value="Разработана финмодель" />
-              <p>Разработана финмодель</p>
-            </div>
-            <div class="item">
+            <div class="check-item">
               <input
+                id="Разработана финмодель"
+                name="stage"
+                type="radio"
+                value="Разработана финмодель"
+              />
+              <label for="Разработана финмодель">Разработана финмодель</label>
+            </div>
+            <div class="check-item">
+              <input
+                id="Прописаны стандарты и бизнес-процессы"
                 name="stage"
                 type="radio"
                 value="Прописаны стандарты и бизнес-процессы"
               />
-              <p>Прописаны стандарты и бизнес-процессы</p>
+              <label for="Прописаны стандарты и бизнес-процессы"
+                >Прописаны стандарты и бизнес-процессы</label
+              >
             </div>
           </div>
         </div>
-        <label
-          >Какого месячного заработка хотите добиться с вашей франшизы?</label
-        >
-        <div class="step-3">
+        <label>
+          Какого месячного заработка хотите добиться с вашей франшизы?
+        </label>
+        <div class="step">
           <div class="column">
-            <div class="item">
-              <input name="salary" type="radio" value="100-300" />
-              <p>100-300 тысяч рублей</p>
+            <div class="check-item">
+              <input id="100-300" name="salary" type="radio" value="100-300" />
+              <label for="100-300">100-300 тысяч рублей</label>
             </div>
-            <div class="item">
-              <input name="salary" type="radio" value="300-500" />
-              <p>300-500 тысяч рублей</p>
+            <div class="check-item">
+              <input
+                id="500-1000"
+                name="salary"
+                type="radio"
+                value="500-1000"
+              />
+              <label for="500-1000">500-1000 тысяч рублей</label>
             </div>
           </div>
           <div class="column">
-            <div class="item">
-              <input name="salary" type="radio" value="500-1000" />
-              <p>500-1000 тысяч рублей</p>
+            <div class="check-item">
+              <input id="300-500" name="salary" type="radio" value="300-500" />
+              <label for="300-500">300-500 тысяч рублей</label>
             </div>
-            <div class="item">
-              <input name="salary" type="radio" value="1000+" />
-              <p>Более миллиона рублей</p>
+            <div class="check-item">
+              <input id="1000+" name="salary" type="radio" value="1000+" />
+              <label for="1000+">Более миллиона рублей</label>
             </div>
           </div>
         </div>
       </div>
-      <button class="submit">
-        Отправить
+      <button class="submit" disabled>
+        Далее
       </button>
     </div>
   </body>

@@ -17,8 +17,7 @@ function createCustomer()
     $json_str = file_get_contents('php://input');
     $data = json_decode($json_str);
 
-    $created = Service::createCustomer($data);
+    Service::createCustomer($data);
 
-    echo json_encode($created);
     return true;
 }

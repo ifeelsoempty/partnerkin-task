@@ -4,14 +4,13 @@ body {
   background: #e0e0e0;
 }
 
-input {
-  min-width: 25px;
-  min-height: 25px;
-  border-radius: 10;
-  margin-right: 15px;
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
 }
 
 input[type="text"] {
+  width: 100%;
   font-size: 20px;
   padding: 10px 0;
   border: 0;
@@ -27,6 +26,30 @@ input[type="text"]:focus {
 label {
   font-weight: 200;
   color: #979797;
+  margin: 0;
+}
+
+#another-option:focus::placeholder {
+  color: transparent;
+}
+
+.select {
+  font-size: 20px;
+  width: 100%;
+  padding: 13px 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+}
+
+.select:active {
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+}
+
+.select:focus {
+  outline: 0;
 }
 
 .form {
@@ -64,40 +87,58 @@ label {
   margin: 45px 0;
 }
 
-.step-1 {
-  margin: 15px 0;
-}
-
-.step-2 {
-  margin: 15px 0;
+.step {
+  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
 }
 
-.step-3 {
-  margin: 15px 0;
+.check-item {
   display: flex;
-  flex-direction: row;
+  margin-top: 40px;
 }
 
-.item {
-  display: flex;
-  margin-top: 20px;
-  font-weight: 500;
+.check-item label {
+  color: #000000;
+  font-weight: 400;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 0 25px 0 40px;
   font-size: 15px;
 }
 
-.input-item {
-  margin: 15px 0;
+.check-item label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0;
+  border: 1px solid #cbcbcb;
 }
 
-.completed p{
+input[type="radio"]:checked + label:before,
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  color: #b3688b;
+  font-size: 30px;
+  text-align: center;
+  line-height: 18px;
+}
+
+.input-item {
+  margin: 25px 0;
+}
+
+.completed p {
   font-size: 25px;
   text-align: center;
   font-weight: 500;
 }
 
-.completed img{
+.completed img {
   display: block;
   margin: 0 auto;
 }
@@ -109,7 +150,7 @@ label {
   bottom: 0;
   right: 36%;
   left: 36%;
-  bottom: 80px;
+  bottom: 50px;
   width: 200px;
   height: 55px;
   color: #ffffff;
@@ -125,5 +166,9 @@ label {
 
 .submit:hover {
   transition: 0.2s;
-  background: rgb(161, 79, 117);
+  background: #975875;
+}
+
+.submit:disabled {
+  background: #b3688ba2;
 }
