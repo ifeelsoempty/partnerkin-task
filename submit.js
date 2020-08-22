@@ -30,7 +30,7 @@ function createSecondForm() {
   submit.setAttribute("disabled", null);
   submit.removeEventListener("click", createSecondForm);
   submit.addEventListener("click", onSubmit);
-  submit.innerText = 'Отправить';
+  submit.innerText = "Отправить";
 
   //Получение input-ов второй формы и изменение условий доступа к кнопке
   inputs = Array.from(document.getElementsByTagName("input"));
@@ -61,7 +61,7 @@ function createSecondForm() {
     });
 
     //Запрос с добавлением в базу данных
-    fetch("http://test-task/api/customer/create", {
+    fetch("/api/customer/create", {
       method: "POST",
       body: JSON.stringify(data),
     });
