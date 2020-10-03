@@ -1,5 +1,7 @@
 Приложение для записи и получения заявок из базы данных.
 
+Приложение без серверсайда: https://ifeelsoempty.github.io/partnerkin-task/
+
 На серверсайде использован шаблон MVC.
   
 Дамп базы данных: '/api/db/partnerkin_db_dump.sql'.
