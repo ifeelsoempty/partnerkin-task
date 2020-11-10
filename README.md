@@ -1,6 +1,6 @@
 Приложение для отправки и получения заявок из базы данных
 
-Приложение без серверсайда: https://ifeelsoempty.github.io/partnerkin-task/
+Приложение без серверсайда: https://ifeelsoempty.github.io/partnerkin-test/
 
 На серверсайде использован шаблон MVC.
   
